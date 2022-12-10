@@ -21,7 +21,3 @@ WORKDIR /app
 COPY --from=build /app/dist/no0days_frontend /usr/share/nginx/html
 
 EXPOSE 80
-
-# docker build --tag=no0days/frontend:latest . --no-cache
-# docker push no0days/frontend:latest
-# docker run -p 80:80 no0days/frontend:latest
