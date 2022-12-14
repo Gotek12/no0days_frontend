@@ -18,6 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `npm run lint --fix`
 
-
 ## Other doc
+
 [1. Docker](./doc/docker.md)
+[2. Material Design](./doc/material.md)
