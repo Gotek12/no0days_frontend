@@ -28,7 +28,7 @@ Run `npm run fix`
 
 ## Development
 
-Each request to backend automatically add http://localhost:3000/ address at start.   
+Each request to backend automatically add http://localhost:3000/ address at start.  
 Only new address we define like `users/signin`.
 
 ## Other doc

@@ -11,7 +11,6 @@ export class LoginGuard implements CanActivate {
 	canActivate(): Observable<boolean> {
 		return this.authService.isAuthenticated().pipe(
 			switchMap((logged) => {
-				console.log(logged);
 				if (logged) {
 					this.router.navigate(['']).then(() => noop());
 					return of(false);

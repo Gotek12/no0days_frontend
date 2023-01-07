@@ -10,7 +10,7 @@ export class JwtTokenService {
 	private TOKEN_NAME = 'token';
 	constructor() {}
 
-	isLoggedIn(): Observable<boolean> {
+	isAuthenticated(): Observable<boolean> {
 		this.isExpired();
 		return this.jwtSub.asObservable();
 	}
@@ -25,7 +25,6 @@ export class JwtTokenService {
 	}
 
 	deleteToken(): void {
-		console.log('remove');
 		localStorage.removeItem(this.TOKEN_NAME);
 		this.jwtSub.next(false);
 	}
@@ -58,12 +57,8 @@ export class JwtTokenService {
 	}
 }
 
-// https://blog.angular-university.io/angular-jwt-authentication/
-// https://www.bezkoder.com/logout-when-token-expired-angular-14/
-
 interface User {
 	email: string;
 	name: string;
-
 	provider?: string;
 }

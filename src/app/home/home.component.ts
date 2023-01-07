@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { JwtTokenService } from '../services/jwt-token.service';
+import { JwtTokenService } from '../core/services/jwt-token.service';
 import { noop } from 'rxjs';
+import { AuthService } from '../core/services/auth.service';
 
 @Component({
 	selector: 'nod-home',
@@ -11,14 +12,14 @@ import { noop } from 'rxjs';
 export class HomeComponent {
 	constructor(
 		private route: ActivatedRoute,
-		protected jwtTokenService: JwtTokenService,
+		protected authService: AuthService,
 
 		private router: Router
 	) {
 		this.route.queryParams.subscribe((params) => {
 			const { token } = params;
 			if (token) {
-				jwtTokenService.saveToken(token);
+				this.authService.saveToken(token);
 				this.router.navigate(['/']).then(() => noop());
 			}
 		});
