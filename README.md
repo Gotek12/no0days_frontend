@@ -14,11 +14,24 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Lint and prettier
+## Lint
 
 Run `npm run lint --fix`
 
+## Prettier
+
+Run `npm run format`
+
+## Lint and prettier
+
+Run `npm run fix`
+
+## Development
+
+Each request to backend automatically add http://localhost:3000/ address at start.   
+Only new address we define like `users/signin`.
+
 ## Other doc
 
-[1. Docker](./doc/docker.md)
+[1. Docker](./doc/docker.md)  
 [2. Material Design](./doc/material.md)

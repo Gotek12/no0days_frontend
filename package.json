@@ -6,8 +6,8 @@
 		"start": "ng serve",
 		"build": "ng build",
 		"lint": "ng lint",
-		"fix": "ng lint --fix",
-		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+		"format": "prettier --write \"**/*.+(json|css|md|html|ts|scss)\"",
+		"fix": "npm run format && ng lint --fix"
 	},
 	"private": true,
 	"dependencies": {
